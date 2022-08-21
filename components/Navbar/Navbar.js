@@ -15,7 +15,7 @@ export default function Navbar() {
         </button>
         <NavList parentDiv="z-[100] hidden md:flex md:flex-row gap-4" responsive={false} />
       </div>
-      <NavList toggle={toggleMenu} responsive={true} parentDiv={`z-[100] flex flex-col gap-4 w-screen bg-white transition absolute md:hidden fixed top-[8vh] ${toggleMenu? "h-[92vh] fixed" : "h-0 transition-all delay-500"}`}/>
+      <NavList toggle={toggleMenu} responsive={true} parentDiv={`z-[100] flex flex-col gap-4 w-screen bg-white transition absolute md:hidden fixed  top-[7vh] ${toggleMenu? "h-[93vh] fixed" : "h-0 transition-all delay-500"}`}/>
     </div>
   );
 } 

@@ -12,12 +12,16 @@ module.exports = {
         sec: "#E9498C",
       },
       keyframes: {
-        animateBox: {
-          from: { transform: "translateX(0px)" },
-          to: { transform: "translateX(80vw)" },
+        animateBoxProjects: {
+          from: { transform: "translateX(70vw)" },
+          to: { transform: "translateX(0vw)" },
+        },
+        animateBoxTeams: {
+          from: { transform: "translateX(0vw)" },
+          to: { transform: "translateX(70vw)" },
         },
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };

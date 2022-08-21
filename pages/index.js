@@ -1,12 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Team from "../components/Team/Team"
+import Team from "../components/Sections/Team";
+import Projects from "../components/Sections/Projects";
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Team />
+      <Projects />
     </div>
-  )
+  );
 }
