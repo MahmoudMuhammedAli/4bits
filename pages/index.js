@@ -5,11 +5,13 @@ import WhatDoing from "../components/WhatDoing/WhatDoing";
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
-      <Hero />
+    <div className="overflow-x-hidden">
+      <div className="flex items-center justify-center py-40">
+        <Hero />
+      </div>
       <Team />
-      <WhatDoing />
       <Projects />
+      <WhatDoing />
     </div>
   );
 }

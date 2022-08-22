@@ -8,7 +8,11 @@ export default function TeamCard(props) {
       style={{ boxShadow: "5px 5px 20px #ccc" }}
     >
       <div className="flex w-[150%]">
-        <Image src={props.imageSrc} className="object-cover rounded-l-2xl" />
+        <Image
+          src={props.imageSrc}
+          className="object-cover rounded-l-2xl"
+          alt=""
+        />
       </div>
       <div className="flex flex-col p-8">
         <h1 className="text-3xl font-bold w-[70%] mb-5">{props.name}</h1>
