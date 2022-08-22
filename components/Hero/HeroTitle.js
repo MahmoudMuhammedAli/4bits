@@ -2,7 +2,7 @@ export default function HeroTitle(props) {
   const { className } = props;
   return (
     <div
-      className={`${className}  sm:flex w-full   flex-row items-end justify-around border-solid md:py-40 `}
+      className={`${className}  sm:flex w-full   flex-row items-end justify-around border-solid sm:py-20 `}
     >
       <h1 className=" sm:w-[30%] text-white sm:text-black text-6xl mt-8 font-black">
         See our planet better.
