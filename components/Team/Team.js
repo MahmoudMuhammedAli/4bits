@@ -38,7 +38,7 @@ export default function Team() {
       },
     ];
   return (
-    <div className="absolute top-[8vh] py-5 w-screen">
+    <div className="my-10 top-[8vh] py-5 w-screen">
       <div className="text-3xl font-bold text-gray-800 pl-5 my-5 flex justify-between">
         <div className="w-[85px] p-2 ">Our Team...</div>
         <div className="border-b-8 border-black w-[40vw] mb-4"></div>
@@ -56,9 +56,9 @@ export default function Team() {
             );
           })}
 
-          <div className="absolute bottom-[20%] h-44 w-[20vw] bg-prim z-[-100] animate-[animateBox_10s_ease-in-out_infinite_alternate] duration-100"></div>
+          <div className="bottom-[20%] h-44 w-[20vw] bg-prim z-[-100] animate-[animateBox_10s_ease-in-out_infinite_alternate] duration-100"></div>
           <div
-            className={`absolute flex justify-center items-center w-full h-[100%] sm:hidden ${
+            className={`flex justify-center items-center w-full h-[100%] sm:hidden ${
               hideMouseDetect && "hidden"
             }`}
             onTouchStart={() => {
