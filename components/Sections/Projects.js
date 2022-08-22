@@ -38,12 +38,14 @@ export default function Project(props) {
   const [hideMouseDetect, setMouseDetect] = React.useState(false);
   return (
     <div className="top-[8vh] w-screen">
-      <div className="text-3xl font-bold text-gray-800 my-5 flex justify-start">
-        <div className="border-b-8 border-sec w-[50vw] mb-4"></div>
-        <div className="w-[85px] my-2 mx-16 text-sec">Our Projects...</div>
+      <div className="text-3xl font-bold text-gray-800 my-5 flex justify-between">
+        <div className="w-[85px] my-2 mx-16 md:text-4xl font-extrabold  text-prim">
+          Our Projects...
+        </div>
+        <div className="border-b-8 border-prim w-[50vw] mb-4" />
       </div>
       <div className="flex items-center justify-start 2xl:justify-center ">
-        <div className="overflow-y-hidden flex flex-row items-center w-full py-10 overflow-x-auto scrollbar-thin scrollbar-thumb-black">
+        <div className="overflow-y-hidden flex flex-row items-center w-full py-10 overflow-x-hidden">
           {dataMapping.map((item, index) => {
             return (
               <ProjectCard
@@ -61,7 +63,7 @@ export default function Project(props) {
             }`}
             onTouchStart={() => {
               setMouseDetect(!hideMouseDetect);
-            }} 
+            }}
           >
             <Lottie
               animationData={swipe}
@@ -69,7 +71,7 @@ export default function Project(props) {
               className="-z-100 w-80 rounded-3xl"
             />
           </div>
-          <div className="absolute mt-[-200px] h-44 left-0 w-[20vw] bg-sec z-[-1000] animate-[animateBoxProjects_8s_ease-in-out_infinite_alternate]"></div>
+          <div className="absolute mt-[-200px] h-44 left-0 w-[20vw] bg-prim z-[-1000] animate-[animateBoxProjects_8s_ease-in-out_infinite_alternate]"></div>
         </div>
       </div>
     </div>

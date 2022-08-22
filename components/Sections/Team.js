@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef, useCallback } from "react";
 import React from "react";
 import TeamCard from "../Cards/TeamCards";
 import Lottie from "lottie-react";
@@ -8,6 +9,7 @@ import Mashoor from "../../assets/img/Mashoor.jpeg";
 import Omar from "../../assets/img/Omar.png";
 
 export default function Team(props) {
+
   const dataMapping = [
     {
       name: "Mohamed Mashhor",
@@ -34,6 +36,7 @@ export default function Team(props) {
         "A senior Computer Science student at Cairo University who's always been a tech enthusiast and a self-driven, passionate learner.",
     },
   ];
+
   const [ hideMouseDetect, setMouseDetect ] = React.useState(false);
   return (
     <div className="top-[8vh] mt-24 w-screen h-[90vh]">
@@ -44,7 +47,10 @@ export default function Team(props) {
         <div className="border-b-8 border-black w-[50vw] mb-4" />
       </div>
       <div className="flex items-center justify-start 2xl:justify-center ">
-        <div className="overflow-y-hidden flex flex-row items-center w-full py-10 overflow-x-auto scrollbar-thin scrollbar-thumb-sec cursor-grab">
+        <div
+          className="overflow-y-hidden flex flex-row items-center w-full py-10 overflow-x-hidden"
+
+        >
           {dataMapping.map((item, index) => {
             return (
               <TeamCard
@@ -57,8 +63,9 @@ export default function Team(props) {
             );
           })}
           <div
-            className={`absolute flex justify-center items-center w-full h-[100%] sm:hidden ${hideMouseDetect &&
-              "hidden"}`}
+            className={`absolute flex justify-center items-center w-full h-[100%] sm:hidden ${
+              hideMouseDetect && "hidden"
+            }`}
             onTouchStart={() => {
               setMouseDetect(!hideMouseDetect);
             }}
@@ -69,7 +76,7 @@ export default function Team(props) {
               className="-z-100 w-80 rounded-3xl"
             />
           </div>
-          <div className="absolute mt-[200px] h-44 left-0 w-[20vw] bg-prim z-[-1000] animate-[animateBoxTeams_8s_ease-in-out_infinite_alternate]" />
+          <div className="absolute mt-[200px] h-44 left-0 w-[20vw] bg-black z-[-1000] animate-[animateBoxTeams_8s_ease-in-out_infinite_alternate]" />
         </div>
       </div>
     </div>
