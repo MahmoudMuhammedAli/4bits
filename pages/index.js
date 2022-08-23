@@ -4,6 +4,7 @@ import Team from "../components/Sections/Team";
 import WhatDoing from "../components/WhatDoing/WhatDoing";
 import Testimonials from "../components/Sections/Testimonials";
 
+
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
@@ -15,5 +16,6 @@ export default function Home() {
       <Projects />
       <WhatDoing />
     </div>
+
   );
 }
