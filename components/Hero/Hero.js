@@ -1,6 +1,10 @@
-import HeroTitle from "./HeroTitle";
+// import HeroTitle from "./HeroTitle";
 import Image from "next/image";
 // import randomImage from "../../assets/img/randomImage.jpg";
+import dynamic from "next/dynamic";
+
+const HeroTitle = dynamic(()=>import('./HeroTitle'));
+
 export default function Hero() {
   return (
     <div className="flex flex-col w-[100%]  my-30">
