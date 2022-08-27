@@ -12,15 +12,13 @@ const Testimonials = dynamic(()=>import('../components/Sections/Testimonials')) 
 
 export default function Home() {
   return (
-    // <div classNameName="overflow-x-hidden">
-    //   <Hero />
-    //   <Team />
-    //   <Testimonials />
-    //   <Projects />
-    //   <WhatDoing />
-    // </div>
-    <>
+    <div classNameName="overflow-x-hidden">
+      <Hero />
+      <Team />
+      <WhatDoing />
+      <Testimonials />
+      <Projects />
       <Contact />
-    </>
+    </div>
   );
 }
