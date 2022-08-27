@@ -3,6 +3,7 @@ import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 
 export default function Contact() {
   const [phoneValue, setPhoneValue] = React.useState("");
+  const [country, setCountry] = React.useState("EG");
   function isVaildPhone(value) {
     if (isValidPhoneNumber(value)) {
       if (!isValidPhoneNumber(value + "0")) return true;
@@ -39,13 +40,13 @@ export default function Contact() {
               Phone
             </label>
             <div>
-            <PhoneInput
-              className="text-md p-2.5 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  ray-400 ue-500 blue-500"
-              placeholder="Enter phone number"
-              value={phoneValue}
+              <PhoneInput
+                className="text-md p-2.5 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  ray-400 ue-500 blue-500"
+                placeholder="Enter phone number"
+                defaultCountry={country}
+                value={phoneValue}
                 onChange={setPhoneValue}
-                
-            />
+              />
               {phoneValue ? (
                 isVaildPhone(phoneValue) ? (
                   <div className="text-green-500">Valid</div>
