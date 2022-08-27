@@ -3,13 +3,23 @@ import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 
 export default function Contact() {
   const [phoneValue, setPhoneValue] = React.useState("");
-  const [country, setCountry] = React.useState("EG");
+  const [country, setCountry] = React.useState();
   function isVaildPhone(value) {
     if (isValidPhoneNumber(value)) {
       if (!isValidPhoneNumber(value + "0")) return true;
       else return false;
     } else return false;
   }
+
+  React.useEffect(() => {
+    fetch("https://ipinfo.io?token=d2eef956f0df69")
+      .then((response) => response.json())
+      .then((json) => {
+        try {
+          setCountry(json.country);
+        } catch (e) {}
+      });
+  }, [1]);
 
   return (
     <div className="flex justify-center">
