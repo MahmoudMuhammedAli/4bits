@@ -9,7 +9,6 @@ import Mashoor from "../../assets/img/Mashoor.jpeg";
 import Omar from "../../assets/img/Omar.png";
 
 export default function Team(props) {
-
   const dataMapping = [
     {
       name: "Mohamed Mashhor",
@@ -47,36 +46,34 @@ export default function Team(props) {
         <div className="border-b-8 border-black w-[50vw] mb-4" />
       </div>
       <div className="flex items-center justify-start 2xl:justify-center ">
-        <div
-          className="overflow-y-hidden flex flex-row items-center w-full py-10 overflow-x-hidden"
-
-        >
-          {dataMapping.map((item, index) => {
-            return (
-              <TeamCard
-                direction="left"
-                key={index}
-                name={item.name}
-                imageSrc={item.pics}
-                body={item.description}
+        <div id="controls-carousel" className="relative" data-carousel="static">
+          <div className="overflow-y-hidden flex flex-row items-center w-full py-10 overflow-x-hidden">
+            {dataMapping.map((item, index) => {
+              return (
+                <TeamCard
+                  direction="left"
+                  key={index}
+                  name={item.name}
+                  imageSrc={item.pics}
+                  body={item.description}
+                />
+              );
+            })}
+            <div
+              className={`absolute flex justify-center items-center w-full h-[100%] sm:hidden ${hideMouseDetect &&
+                "hidden"}`}
+              onTouchStart={() => {
+                setMouseDetect(!hideMouseDetect);
+              }}
+            >
+              <Lottie
+                animationData={swipe}
+                loop={true}
+                className="-z-100 w-80 rounded-3xl"
               />
-            );
-          })}
-          <div
-            className={`absolute flex justify-center items-center w-full h-[100%] sm:hidden ${
-              hideMouseDetect && "hidden"
-            }`}
-            onTouchStart={() => {
-              setMouseDetect(!hideMouseDetect);
-            }}
-          >
-            <Lottie
-              animationData={swipe}
-              loop={true}
-              className="-z-100 w-80 rounded-3xl"
-            />
+            </div>
+            <div className="absolute mt-[200px] h-44 left-0 w-[20vw] bg-black z-[-1000] animate-[animateBoxTeams_8s_ease-in-out_infinite_alternate]" />
           </div>
-          <div className="absolute mt-[200px] h-44 left-0 w-[20vw] bg-black z-[-1000] animate-[animateBoxTeams_8s_ease-in-out_infinite_alternate]" />
         </div>
       </div>
     </div>
