@@ -21,13 +21,13 @@ export default function Contact() {
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 00 ray-400 ue-500 blue-500"
             placeholder="name@company.com"
             required=""
-          />
+            />
         </div>
         <div className="mb-6">
           <label
             for="phone"
             className="block mb-2 text-sm font-medium text-gray-900 "
-          >
+            >
             Phone
           </label>
           <PhoneInput
