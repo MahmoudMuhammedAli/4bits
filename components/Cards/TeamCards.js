@@ -4,13 +4,13 @@ import Image from "next/image";
 export default function TeamCard(props) {
   return (
     <div
-      className="h-[450px] bg-white flex items-stretch grow flex-shrink-0 mx-7 w-[130vw] sm:w-full md:w-10/12 lg:w-6/12 xl:w-4/12 2xl:w-3/12 max-h rounded-2xl"
+      className="h-[450px] bg-white flex items-stretch  flex-shrink-0 mx-7 w-[130vw] sm:w-full md:w-10/12 lg:w-5/12 max-h rounded-2xl"
       style={{ boxShadow: "5px 5px 20px #ccc" }}
     >
       <div className="flex w-[150%]">
         <Image
           src={props.imageSrc}
-          className="object-cover rounded-l-2xl"
+          className="object-cover rounded-l-2xl w-full"
           alt=""
         />
       </div>
