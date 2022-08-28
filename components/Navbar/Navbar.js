@@ -1,12 +1,18 @@
-import { useState } from "react";
+
 import { BiMenu } from "react-icons/bi";
 import NavList from "./NavList";
-
+import { useTheme } from 'next-themes';
+import { useState , useEffect } from 'react';
 export default function Navbar() {
   const [ toggleMenu, editToggleMenu ] = useState(false);
+  const [mounted , setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
+  useEffect(() => setMounted(true), [])
+      if(!mounted) return null 
+  
   return (
-    <div className="w-full h-[8vh] fixed z-[100] bg-white ">
+  <div className={`w-full h-[8vh] fixed z-[100] ${theme === 'dark'? 'text-white' && 'bg-black' :'text-black' && 'bg-white'}`}>
       <div className="px-[10vw] h-[8vh] py-4 flex items-center justify-between w-full ">
         <div className="text-prim text-4xl font-bold">
           Four<span className="font-mono text-gray-500  ">Bits</span>
