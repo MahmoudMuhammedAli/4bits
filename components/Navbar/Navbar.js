@@ -8,8 +8,8 @@ import Link from "next/link";
 export default function Navbar() {
   const { t } = useTranslation();
   const router = useRouter();
-  const [ toggleMenu, editToggleMenu ] = useState(false);
-  const [ mounted, setMounted ] = useState(false);
+  const [toggleMenu, editToggleMenu] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
@@ -17,14 +17,15 @@ export default function Navbar() {
 
   return (
     <div
-      className={`w-full h-[8vh] fixed z-[100] ${theme === "dark"
-        ? "text-white" && "bg-black"
-        : "text-black" && "bg-white"}`}
+      className={`w-full h-[8vh] fixed z-[100] ${
+        theme === "dark"
+          ? "text-white" && "bg-black"
+          : "text-black" && "bg-white"
+      }`}
     >
       <div className="px-[10vw] h-[8vh] py-4 flex items-center justify-between w-full ">
         <div className="text-prim text-4xl font-bold">
           Four<span className="font-mono text-gray-500  ">Bits</span>
-          {t("description")}
         </div>
         <button
           className="block md:hidden"
@@ -42,9 +43,9 @@ export default function Navbar() {
       <NavList
         toggle={toggleMenu}
         responsive={true}
-        parentDiv={`z-[100] flex flex-col gap-4 w-screen bg-white transition absolute md:hidden fixed  top-[7vh] ${toggleMenu
-          ? "h-[93vh] fixed"
-          : "h-0 transition-all delay-500"}`}
+        parentDiv={`z-[100] flex flex-col gap-4 w-screen bg-white transition absolute md:hidden fixed  top-[7vh] ${
+          toggleMenu ? "h-[93vh] fixed" : "h-0 transition-all delay-500"
+        }`}
       />
     </div>
   );
