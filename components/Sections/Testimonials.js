@@ -22,7 +22,15 @@ export default function Testimonials(props) {
       </div>
       <div className="flex items-center justify-start 2xl:justify-center ">
         <div className="overflow-y-hidden flex flex-row items-center w-full py-10 overflow-x-hidden">
-          <Carousel slide slideInterval={1000}>
+          <Carousel slide slideInterval={2000}>
+            <TestimonialCard {...testimonials} />
+            <TestimonialCard {...testimonials} />
+            <TestimonialCard {...testimonials} />
+            <TestimonialCard {...testimonials} />
+            <TestimonialCard {...testimonials} />
+            <TestimonialCard {...testimonials} />
+            <TestimonialCard {...testimonials} />
+            <TestimonialCard {...testimonials} />
             <TestimonialCard {...testimonials} />
             <TestimonialCard {...testimonials} />
             <TestimonialCard {...testimonials} />

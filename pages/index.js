@@ -8,7 +8,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Home() {
   return (
-    <div classNameName="overflow-x-hidden">
+    <div className="overflow-x-hidden">
       <Hero />
       <Team />
       <WhatDoing />
