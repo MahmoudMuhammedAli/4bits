@@ -86,3 +86,6 @@ figure.snip1157 .author h5 span {
 }
 
 
+[data-testid *="carousel-item"] {
+  width: fit-content !important;
+}
