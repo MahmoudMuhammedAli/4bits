@@ -1,8 +1,14 @@
 import React from "react";
-
+import { useTheme } from 'next-themes';
+import { useState , useEffect } from 'react';
 export default function NavList(props) {
+  const [mounted , setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), [])
+      if(!mounted) return null 
   return (
-    <ul className={props.parentDiv}>
+      <ul className={`${props.parentDiv} ${theme === 'dark'? 'text-white' && 'bg-black' :'text-black' && 'bg-white'}`}>
       <li
         className={`font-semibold text-lg md:text-xl lg:text-2xl transition-all delay-75  duration-500 ${props.toggle
           ? "px-12 py-3 border-b-2 shadow-sm -translate-x-0"

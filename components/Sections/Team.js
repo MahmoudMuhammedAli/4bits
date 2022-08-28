@@ -7,7 +7,10 @@ import Bebo from "../../assets/img/Bebo.jpeg";
 import Mahmoud from "../../assets/img/Mahmoud.jpeg";
 import Mashoor from "../../assets/img/Mashoor.jpeg";
 import Omar from "../../assets/img/Omar.png";
+
 import { Carousel } from "react-responsive-carousel";
+
+import { useTheme } from "next-themes";
 
 export default function Team(props) {
   const dataMapping = [
@@ -38,10 +41,19 @@ export default function Team(props) {
   ];
 
   const [ hideMouseDetect, setMouseDetect ] = React.useState(false);
+  const [ mounted, setMounted ] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
   return (
     <div className=" mt-24 w-screen ">
       <div className="text-3xl font-bold text-gray-800 my-5 flex justify-between">
-        <div className="w-[85px] my-2 mx-16 md:text-4xl font-extrabold  text-black">
+        <div
+          className={`w-[85px] my-2 mx-16 ${theme === "dark"
+            ? "text-white"
+            : "text-black"}  md:text-4xl font-extrabold `}
+        >
           Our Team...
         </div>
         <div className="border-b-8 border-black w-[50vw] mb-4" />
