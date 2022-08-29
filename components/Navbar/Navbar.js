@@ -36,7 +36,7 @@ export default function Navbar() {
           </div>
         </button>
         <NavList
-          parentDiv="z-[100] hidden md:flex md:flex-row gap-4"
+          parentDiv="z-[100] hidden md:flex items-center md:flex-row gap-4"
           responsive={false}
         />
       </div>
