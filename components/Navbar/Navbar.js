@@ -23,9 +23,9 @@ export default function Navbar() {
           : "text-black" && "bg-white"
       }`}
     >
-      <div className="px-[10vw] h-[8vh] py-4 flex items-center justify-between w-full ">
-        <div className="text-prim text-4xl font-bold">
-          Four<span className="font-mono text-gray-500  ">Bits</span>
+      <div className="px-[10vw] py-4 h-[8vh] flex items-center justify-between w-full ">
+        <div className="flex items-center text-prim text-4xl font-bold">
+          Four<span className="font-mono text-gray-500">Bits</span>
         </div>
         <button
           className="block md:hidden"
@@ -44,7 +44,7 @@ export default function Navbar() {
         toggle={toggleMenu}
         responsive={true}
         parentDiv={`z-[100] flex flex-col gap-4 w-screen bg-white transition absolute md:hidden fixed  top-[7vh] ${
-          toggleMenu ? "h-[93vh] fixed" : "h-0 transition-all delay-500"
+          toggleMenu ? "h-[93vh] fixed" : "h-0 transition-all delay-[700ms]"
         }`}
       />
     </div>
